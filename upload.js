@@ -38,7 +38,8 @@ export function upload(selector, options = {}) {
 
       reader.onload = ev => {
         const src = ev.target.result
-        preview.insertAdjacentHTML('afterbegin', `
+        // /*html*/ caption is for html syntax highlight in js 
+        preview.insertAdjacentHTML('afterbegin', /*html*/`
         <div class="preview-image">
           <div class="preview-remove">&times;</div>
           <img src="${src}" alt="${file.name}" />

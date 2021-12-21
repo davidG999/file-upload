@@ -61,15 +61,26 @@ input[type=file] {
   position     : relative;
   margin-bottom: .5rem;
   margin-right : .5rem;
+  overflow     : hidden;
+  transition   : .22s;
 }
 
 .preview-image img {
-  width : 180px;
-  height: auto;
+  width  : 180px;
+  height : auto;
+  display: block;
 }
 
 .preview-image:hover .preview-remove {
   opacity: 1;
+}
+
+.preview-image:hover .preview-info {
+  bottom: 0px;
+}
+
+.preview-image:hover {
+  box-shadow: 1px 5px 15px #999;
 }
 
 .preview-remove {
@@ -80,10 +91,27 @@ input[type=file] {
   right          : 0;
   top            : 0;
   font-weight    : bold;
-  background     : rgba(150, 150, 150, .5);
+  background     : rgba(0, 0, 0, .5);
+  color          : #fff;
   display        : flex;
   align-items    : center;
   justify-content: center;
   cursor         : pointer;
   transition     : opacity .22s;
+}
+
+.preview-info {
+  position       : absolute;
+  right          : 0;
+  bottom         : -30px;
+  left           : 0;
+  height         : 24px;
+  font-size      : .8rem;
+  background     : rgba(50, 50, 50, .5);
+  color          : #fff;
+  display        : flex;
+  align-items    : center;
+  justify-content: space-between;
+  padding        : 0 5px;
+  transition     : bottom .22s;
 }
