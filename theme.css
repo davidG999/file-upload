@@ -65,6 +65,11 @@ input[type=file] {
   transition   : .22s;
 }
 
+.preview-image.removing {
+  transform : scale(0);
+  transition: transform .3s;
+}
+
 .preview-image img {
   width  : 180px;
   height : auto;
