@@ -7,16 +7,27 @@ function bytesToSize(bytes) {
   return Math.round(bytes / Math.pow(1024, i), 2) + ' ' + sizes[i];
 }
 
+const element = (tag, classes = [], content) => {
+  const node = document.createElement(tag)
+
+  if (classes.length) {
+    node.classList.add(...classes)
+  }
+
+  if (content) {
+    node.textContent = content
+  }
+
+  return node
+}
+
 export function upload(selector, options = {}) {
   let files = []
   const input = document.querySelector(selector);
-  const preview = document.createElement('div')
-
-  preview.classList.add('preview')
-
-  const open = document.createElement('button')
-  open.classList.add('btn')
-  open.textContent = 'Open'
+  const preview = element('div', ['preview'])
+  const open = element('button', ['btn'], 'Open')
+  const upload = element('button', ['btn', 'primary'], 'Upload')
+  upload.style.display = 'none'
 
   if (options.multi) {
     input.setAttribute('multiple', true)
@@ -27,6 +38,7 @@ export function upload(selector, options = {}) {
   }
 
   input.insertAdjacentElement('afterend', preview)
+  input.insertAdjacentElement('afterend', upload)
   input.insertAdjacentElement('afterend', open)
 
   const triggerInput = () => input.click()
@@ -36,9 +48,10 @@ export function upload(selector, options = {}) {
       return
     }
 
-    const files = Array.from(event.target.files)
-
+    files = Array.from(event.target.files)
     preview.innerHTML = ''
+    upload.style.display = 'inline'
+
     files.forEach(file => {
       if (!file.type.match('image')) {
         return
@@ -73,15 +86,24 @@ export function upload(selector, options = {}) {
     const { name } = event.target.dataset
     files = files.filter(file => file.name !== name)
 
+    if (!files.length) {
+      upload.style.display = 'none'
+    }
+
     const block = preview
-    .querySelector(`[data-name="${name}"]`)
-    .closest('.preview-image')
-    
+      .querySelector(`[data-name="${name}"]`)
+      .closest('.preview-image')
+
     block.classList.add('removing')
     setTimeout(() => block.remove(), 300);
+  }
+
+  const uploadHandler = () => {
+
   }
 
   open.addEventListener('click', triggerInput)
   input.addEventListener('change', changeHandler)
   preview.addEventListener('click', removeHandler)
+  upload.addEventListener('click', uploadHandler)
 }
