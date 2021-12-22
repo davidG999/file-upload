@@ -98,6 +98,11 @@ export function upload(selector, options = {}) {
     setTimeout(() => block.remove(), 300);
   }
 
+  const clearPreview = el => {
+    el.style.bottom = '0px'
+    el.innerHTML = '<div class="preview-info-progress"></div>'
+  }
+
   const uploadHandler = () => {
 
   }
