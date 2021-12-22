@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Roboto:regular,700);
 
 body {
   background-color: #555;
@@ -95,7 +95,7 @@ input[type=file] {
   position       : absolute;
   right          : 0;
   top            : 0;
-  font-weight    : bold;
+  font-weight    : 700;
   background     : rgba(0, 0, 0, .5);
   color          : #fff;
   display        : flex;
@@ -122,12 +122,13 @@ input[type=file] {
 }
 
 .preview-info-progress {
-  position  : absolute;
-  left      : 0;
-  top       : 0;
-  bottom    : 0;
-  background: #42b983;
-  text-align: center;
-  transition: width .22s;
-  width     : 30%;
+  position       : absolute;
+  left           : 0;
+  top            : 0;
+  bottom         : 0;
+  background     : #42b983;
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+  transition     : width .22s;
 }

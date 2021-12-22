@@ -1,10 +1,10 @@
 function bytesToSize(bytes) {
-  var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+  const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB']
   if (!bytes) {
-    return '0 Byte';
+    return '0 Byte'
   }
-  const i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
-  return Math.round(bytes / Math.pow(1024, i), 2) + ' ' + sizes[i];
+  const i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)))
+  return Math.round(bytes / Math.pow(1024, i)) + ' ' + sizes[i]
 }
 
 const element = (tag, classes = [], content) => {
@@ -21,9 +21,12 @@ const element = (tag, classes = [], content) => {
   return node
 }
 
+function noop() { }
+
 export function upload(selector, options = {}) {
   let files = []
-  const input = document.querySelector(selector);
+  const onUpload = options.onUpload ?? noop
+  const input = document.querySelector(selector)
   const preview = element('div', ['preview'])
   const open = element('button', ['btn'], 'Open')
   const upload = element('button', ['btn', 'primary'], 'Upload')
@@ -104,7 +107,10 @@ export function upload(selector, options = {}) {
   }
 
   const uploadHandler = () => {
-
+    preview.querySelectorAll('.preview-remove').forEach(e => e.remove())
+    const previewInfo = preview.querySelectorAll('.preview-info')
+    previewInfo.forEach(clearPreview)
+    onUpload(files, previewInfo)
   }
 
   open.addEventListener('click', triggerInput)
