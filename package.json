@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "parcel index.html"
+    "serve": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "firebase": "^9.6.1",
-    "parcel-bundler": "^1.12.5"
+    "firebase": "^9.6.5",
+    "parcel": "^2.2.1"
   }
 }
