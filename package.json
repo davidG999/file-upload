@@ -2,7 +2,7 @@
   "name": "file-upload",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "serve": "parcel index.html",
     "build": "parcel build index.html"
@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "firebase": "^9.6.5",
+    "firebase": "^9.6.6",
     "parcel": "^2.2.1"
   }
 }

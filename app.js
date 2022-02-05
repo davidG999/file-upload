@@ -2,9 +2,10 @@ import { initializeApp } from 'firebase/app'
 import { getStorage, ref, uploadBytesResumable } from "firebase/storage"
 
 import { upload } from './upload.js'
+import { FIREBASE_API_TOKEN } from './firebase_api.js'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA1HMgmnXwvp4xgtzYvOQ-WFkvsiA3XMQ0",
+  apiKey: FIREBASE_API_TOKEN,
   authDomain: "file-upload-3814e.firebaseapp.com",
   projectId: "file-upload-3814e",
   storageBucket: "file-upload-3814e.appspot.com",
