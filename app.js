@@ -6,11 +6,11 @@ import { FIREBASE_API_TOKEN } from './firebase_api.js'
 
 const firebaseConfig = {
   apiKey: FIREBASE_API_TOKEN,
-  authDomain: "file-upload-3814e.firebaseapp.com",
-  projectId: "file-upload-3814e",
-  storageBucket: "file-upload-3814e.appspot.com",
-  messagingSenderId: "478306403015",
-  appId: "1:478306403015:web:377d887fe61fee901cf4e2"
+  authDomain: "file-upload-dda84.firebaseapp.com",
+  projectId: "file-upload-dda84",
+  storageBucket: "file-upload-dda84.appspot.com",
+  messagingSenderId: "393777250386",
+  appId: "1:393777250386:web:db150251be458a878cdf8b"
 }
 
 const app = initializeApp(firebaseConfig)
