@@ -3,3 +3,7 @@ dist/
 node_modules/
 .parcel-cache/
 firebase_api.js
+.firebase/
+.firebaserc
+firebase.json
+public/
