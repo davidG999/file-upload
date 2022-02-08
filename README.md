@@ -12,13 +12,13 @@ Simple file upload plugin with file's name and size info. All sent images are st
 ## Preview
 ![File upload preview](https://user-images.githubusercontent.com/85896378/152877721-bfb3e8fe-316c-47b5-ac18-1abd1839d4f4.gif)
 
+[Try it out yourself 📎](https://file-upload-dda84.web.app/)
+
 ## Technologies
 * HTML, CSS, JavaScript
 * Built with [Parcel](https://www.npmjs.com/package/parcel)
 * [Deployed](https://file-upload-dda84.web.app/) to [Firebase hosting](https://firebase.google.com/docs/hosting)
 * Data stored on [Firebase Storage](https://firebase.google.com/docs/storage)
-
-[Try it out yourself 📎](https://file-upload-dda84.web.app/)
 
 ## Setup
 ### `npm install`
