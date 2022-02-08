@@ -18,6 +18,8 @@ Simple file upload plugin with file's name and size info. All sent images are st
 * [Deployed](https://file-upload-dda84.web.app/) to [Firebase hosting](https://firebase.google.com/docs/hosting)
 * Data stored on [Firebase Storage](https://firebase.google.com/docs/storage)
 
+[Try it out yourself 📎](https://file-upload-dda84.web.app/)
+
 ## Setup
 ### `npm install`
 Installs dependencies defined in package.json config
