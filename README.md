@@ -2,17 +2,17 @@
 
 ## Table of contents
 * [General info](#general-info)
-* [Preview 👀](#preview)
+* [Preview 👀](#preview-)
 * [Technologies](#technologies)
 * [Setup](#setup)
 
 ## General info
 Simple file upload plugin with file's name and size info. All sent images are stored on Firebase Storage.
 
-## Preview
-![File upload preview](https://user-images.githubusercontent.com/85896378/152877721-bfb3e8fe-316c-47b5-ac18-1abd1839d4f4.gif)
+## Preview 👀
+![File upload preview](https://user-images.githubusercontent.com/85896378/155890511-4648c27d-f13b-4b51-89ea-4e75a9cb5b26.gif)
 
-[Try it out yourself 📎](https://file-upload-dda84.web.app/)
+### [Try it out yourself 📎](https://file-upload-dda84.web.app/)
 
 ## Technologies
 * HTML, CSS, JavaScript
@@ -21,6 +21,7 @@ Simple file upload plugin with file's name and size info. All sent images are st
 * Data stored on [Firebase Storage](https://firebase.google.com/docs/storage)
 
 ## Setup
+
 ### `npm install`
 Installs dependencies defined in package.json config
 
